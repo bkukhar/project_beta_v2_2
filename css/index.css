@@ -9,7 +9,7 @@
 
 html {
     /*padding-top: 15px;*/
-    background: #e9d6dc;
+    background: #d5eaef;
 }
 
 body {
@@ -18,8 +18,14 @@ body {
     margin: auto;
 }
 
-.header-nav a:hover {
-    background: var(--h2-button-color);
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    background: #1482a9;
+    /*border: 2px solid var(--h3-menuborder-footerbg);*/
+    color: #ebebeb;
+    text-align: center;
+    font-family: "Baumans", sans-serif;
 }
 
 .header-nav a {
@@ -29,14 +35,9 @@ body {
     text-decoration: none;
 }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    background: #1482b9;
-    /*border: 2px solid var(--h3-menuborder-footerbg);*/
-    color: #ebebeb;
-    text-align: center;
-    font-family: "Baumans", sans-serif;
+.header-nav a:hover {
+    background: #1482a9;
+    color: #fff;
 }
 
 @media (max-width:539px) {
@@ -110,6 +111,10 @@ body {
     .check_menu:checked~.fourth {
         display: none;
     }
+
+    div.contacts {
+        grid-template-columns: 1fr;
+    }
 }
 
 
@@ -123,8 +128,15 @@ body {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         flex-wrap: nowrap;
-        background: #1482b9;
+        background: #1482c9;
         height: 45px;
+    }
+    
+    .background_image {
+        min-height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
     }
 }
 
@@ -146,16 +158,8 @@ body {
     background-image: url('../images/background.jpg');
     /*height: 500px;*/
     min-height: 80vh;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    /*background-repeat: no-repeat;*/
-}
 
-@media (min-width: 540px) {
-    .background_image {
-        min-height: 500px;
-    }
+    /*background-repeat: no-repeat;*/
 }
 
 section,
@@ -348,7 +352,6 @@ h3 {
 .personal_info p {
     /*font-family: 'Comfortaa', cursive;*/
     text-indent: 20px;
-
     font-size: 18px;
     text-align: justify;
     margin-top: 0;
@@ -473,8 +476,6 @@ aside {
     background-position: 0;
 }
 
-
-
 h4 {
     text-align: center;
     font-size: 22px;
@@ -482,6 +483,7 @@ h4 {
 }
 
 .contacts {
+    font-family: "Baumans", sans-serif;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     flex-wrap: nowrap;
@@ -497,7 +499,7 @@ h4 {
 }
 
 footer {
-    background: var(--h3-menuborder-footerbg);
+    background: #1482c9;
     margin-top: 1px;
     padding: 3px;
 }
@@ -505,4 +507,10 @@ footer {
 .footer_text {
     color: white;
     padding-left: 10px;
+}
+
+.signature {
+    font-family: "Baumans", sans-serif;
+    font-size: 18px;
+    color: #8FBC8F;
 }
